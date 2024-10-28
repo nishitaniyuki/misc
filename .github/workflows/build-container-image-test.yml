@@ -13,7 +13,7 @@ jobs:
           echo "${{ github.actor }}"
           echo "github.event.registry_package.name ${{ github.event.registry_package.name }}"
           echo "github.event.registry_package.package_version.name ${{ github.event.registry_package.package_version.name }}"
-          echo "github.event.registry_package.package_version.container_metadata.tag.name ${{ github.event.registry_package.package_version.container_metadata.tag.name }}"
+          echo "github.event.registry_package.package_version.container_metadata.tag.name ${{ github.event.registry_package.package_version.container_metadata.tag.name["org\.opencontainers\.image\.version"] }}"
           echo "github.event.registry_package.package_version.container_metadata.labels ${{ github.event.registry_package.package_version.container_metadata.labels }}"
           echo "TAG=${{ github.event.registry_package.package_version.container_metadata.tag.name }}" >> $GITHUB_ENV
       - uses: docker/login-action@v3
