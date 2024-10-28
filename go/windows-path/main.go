@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(filepath.Join("a", "b", "../../", "foo"))
+	fmt.Println(filepath.Join("a/b/c", "d"))
 }
